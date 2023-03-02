@@ -2,13 +2,15 @@
 
 ## Modmail Buttons - Add to End of modmail message section in automod rule
 
-
+    id (regex): ".+"
     modmail_subject: "Reported Content | u/{{author}}"
     modmail: |
         ----------
         
         |  [^(**MSG.ADMINS**)](https://www.reddit.com/message/compose?to=%2Fr%2Freddit.com&subject=re%3Au%2F{{author}}&message=Re-Content%3A{{permalink}}%0A%0A%2D%2D%2D%0A%7E%2AFROM r/{{subreddit}} MOD TEAM%2A "Send Modmail to Admins")  |  [^(**REPORT CONTENT**)](https://old.reddit.com/report  "Submit User Report") | [^(**&#128190;**)](https://archive.is/submit/?url={{permalink}} "Archive Post/Comment - [DOES NOT WORK IN PRIVATE SUBS!]") | [^(**&#129522;**)](https://www.unddit.com/r/{{subreddit}}/comments/{{match-id}}/ "UNDDIT - [DOES NOT WORK IN PRIVATE SUBS!]") |
         |:-|:-|:-|:-:|:-:|
+        
+## id (regex): ".+" IS REQUIRED TO GENERATE POST ID FOR {{match-id}} USED FOR UNDDIT LINK   
 
 ## MGS.ADMINS - SEND MODMAIL MSG TO r/reddit.com | SUBJECT: "OTHER - re:u/{{author}}" | BODY: 1ST LINE "Re-Content:{{permalink}}" + "---" (Linebreak) + 2ND LINE "~*FROM r/{{subreddit}} MOD TEAM*"
 
@@ -30,6 +32,7 @@
 
 ## Example used with 'MODMAIL ALERTS PRO+'
 
+    id (regex): ".+"
     modmail_subject: "Reported Content | u/{{author}}"
     modmail: |
         ----------
